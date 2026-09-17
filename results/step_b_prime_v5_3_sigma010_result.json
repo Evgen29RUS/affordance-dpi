@@ -1,0 +1,41 @@
+{
+  "results": {
+    "B": {
+      "normal": {
+        "aux_u_z_u": 0.9781932586428426,
+        "aux_w_z_w": 0.499624765478424
+      },
+      "shuffle": {
+        "aux_u_z_u": 0.5073619766962467,
+        "aux_w_z_w": 0.4921325828642902
+      }
+    },
+    "C": {
+      "normal": {
+        "aux_u_z_u": 0.5071868583162218,
+        "aux_w_z_w": 0.9826266416510319
+      },
+      "shuffle": {
+        "aux_u_z_u": 0.49217671145694486,
+        "aux_w_z_w": 0.4783114446529081
+      }
+    },
+    "D": {
+      "normal": {
+        "aux_u_z_u": 0.5089020177640085,
+        "aux_w_z_w": 0.4915947467166979
+      }
+    }
+  },
+  "checks": {
+    "B: aux\u2192z_u \u2265 0.90 (head learns u)": true,
+    "B: aux\u2192z_w \u2264 0.60 (no leakage to w)": true,
+    "B: shuffle(c) \u2192 z_u \u2264 0.60 (causal)": true,
+    "C: aux\u2192z_w \u2265 0.90 (head learns w)": true,
+    "C: aux\u2192z_u \u2264 0.60 (no leakage to u)": true,
+    "C: shuffle(c) \u2192 z_w \u2264 0.60 (causal)": true,
+    "D: aux\u2192z_u \u2264 0.60 (v irrelevant)": true,
+    "D: aux\u2192z_w \u2264 0.60 (v irrelevant)": true
+  },
+  "all_pass": true
+}
